@@ -2,19 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Employee;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\http\Controllers\EmployeeController;
 
-Route::get('/', function () {
-    return view('index', [
-        'employees' => Employee::all()
-    ]);
-});
+
+// Get all entries
+Route::get('/', [EmployeeController::class, 'index']);
+
+// Update new entry
+Route::put('/employees/update/{employee}', [EmployeeController::class, 'update']);
+
+// Store new entry
+Route::post('/employees', [EmployeeController::class, 'store']);
+
+// Show single entry
+Route::get('/employees/{id}', [EmployeeController::class, 'show']);

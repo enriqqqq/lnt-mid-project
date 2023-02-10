@@ -5,6 +5,7 @@
 @endsection
 
 @section('main')
+    {{$employee}}
     <div class="show-container">
         <div class="btn-row">
             <div class="delete" style="height: 35px; width: 35px; border-radius: 7px; padding: 3px;">
@@ -18,8 +19,9 @@
                 <img class="show-profile" src="{{asset('images/no-profile-2.png')}}" alt="">
             </div>
             <div class="show-modal">
-                <form action="/" method="post" id="updateform">
+                <form action="/employees/update/{{$employee->id}}" id="updateform" method="POST">
                     @csrf
+                    @method('PUT')
                     <div class="row">
                         <label for="name">Name</label>
                         <input id="name" name="name" type="text" value="{{$employee->name}}">
