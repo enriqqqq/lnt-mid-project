@@ -134,3 +134,9 @@ button.delete {
 button.update {
     background-color: rgb(136, 136, 219);
 }
+
+.noentry-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
