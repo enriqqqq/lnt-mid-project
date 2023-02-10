@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Itim';
+    src: url('../fonts/Itim/Itim-Regular.ttf') format('truetype');
+}
+
+/* LAYOUT */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: url('../images/header-background.png');
+    background-size: auto;
+    background-position: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.title {
+    color: white;
+    font-size: 35px;
+    font-family: 'Itim';
+    font-weight: 500;
+}
+
+img.logo {
+    height: 150px;
+    width: auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button#reroute {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+main {
+    background-color: rgb(247, 247, 247);
+    flex: auto;
+}
+
+footer {
+    background-color: rgb(156, 156, 156);
+    background-image: url('../images/header-background.png');
+    background-size: auto;
+    background-position: bottom 200px center;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+}
+
+/* INDEX */
+.display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+.card {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    box-shadow: 4px 5px 5px rgb(199, 199, 199);
+}
+
+img.profile {
+    width: 160px;
+    height: auto;
+}
+
+.btn-row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.btn-row button {
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+img.btn {
+    height: 90%;
+    width: auto;
+}
+
+button.delete {
+    background-color: rgb(207, 93, 93);
+}
+
+button.update {
+    background-color: rgb(136, 136, 219);
+}
