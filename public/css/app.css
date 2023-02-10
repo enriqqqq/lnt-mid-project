@@ -55,7 +55,7 @@ img.logo {
     justify-content: flex-end;
 }
 
-button#reroute {
+div#reroute {
     padding: 10px 20px;
     border-radius: 5px;
     border: 3px solid white;
@@ -111,7 +111,7 @@ img.profile {
     gap: 8px;
 }
 
-.btn-row button {
+.btn-row div {
     height: 25px;
     width: 25px;
     border-radius: 3px;
@@ -122,16 +122,26 @@ img.profile {
     padding: 2px;
 }
 
-img.btn {
+.update a,
+.delete a {
+    display: block;
     height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.btn {
+    height: 100%;
     width: auto;
 }
 
-button.delete {
+div.delete {
     background-color: rgb(207, 93, 93);
 }
 
-button.update {
+div.update {
     background-color: rgb(136, 136, 219);
 }
 
@@ -139,4 +149,91 @@ button.update {
     display: flex;
     justify-content: center;
     padding: 15px;
+}
+
+/* SHOW */
+.show-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px 60px 60px;
+    align-items: center;
+    gap: 25px;
+}
+
+.show-display {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.show-modal {
+    width: 40vw;
+    background-color: white;
+    box-shadow: 4px 5px 5px rgb(199, 199, 199);
+    border-radius: 13px;
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input {
+    appearance: none;
+    border: 1px solid black;
+    padding: 8px;
+    width: 70%;
+    border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 0 0 2pt 2pt #9fadfc;
+}
+
+.prev-next {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+div.prev,
+div.next {
+    height: 35px;
+    width: 35px;
+    background-color: aquamarine;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+a.prev,
+a.next {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.prev img,
+a.next img {
+    height: 90%;
+    width: auto;
+}
+
+button.show-update {
+    background-color: rgb(136, 136, 219);
+    padding: 5px 35px 5px 35px;
+    border-radius: 5px;
+    color: white;
+    border: none;
 }

@@ -1,4 +1,6 @@
 Books icon created by Freepik - "https://www.flaticon.com/free-icons/book"
 No Profile Icon created by Phoenix Group - "https://www.flaticon.com/authors/phoenix-group"
+No Profile Icon 2 created by Freepik - "https://www.flaticon.com/free-icons/user" title="user icons"
 Delete icon created by Kiranshastry - "https://www.flaticon.com/free-icons/delete"
 Update icon created by Pixel Perfect - "https://www.flaticon.com/free-icons/delete"
+Arrows icons created by Pixel perfect - "https://www.flaticon.com/free-icons/arrows"
