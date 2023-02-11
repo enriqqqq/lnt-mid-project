@@ -21,6 +21,11 @@ class EmployeeController extends Controller
         ]);
     }
 
+    // Create entry
+    public function create(){
+        return view('create');
+    }
+
     // Update entry
     public function update(Request $request, Employee $employee){
         $formFields = $request->validate([

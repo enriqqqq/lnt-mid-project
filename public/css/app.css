@@ -247,3 +247,30 @@ p.error {
     color: red;
     font-size: small;
 }
+
+/* CREATE */
+.create-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: 30px;
+}
+
+.create-modal {
+    width: 25vw;
+    padding: 25px;
+    background-color: white;
+}
+
+#createform input {
+    width: 90%;
+}
+
+.create-btn {
+    padding: 15px 4.5vh;
+    border: none;
+    background-color: #f5af46;
+    border-radius: 5px;
+    color: white;
+}

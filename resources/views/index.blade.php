@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('button')
-    <div id= "reroute" href="#"> Add Entry </div>
+    <div id= "reroute"><a href="/employees/create">Add Entry</a></div>
 @endsection
 
 @section('main')
