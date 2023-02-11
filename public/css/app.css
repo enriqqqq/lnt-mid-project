@@ -63,6 +63,11 @@ div#reroute {
     color: white;
 }
 
+div#reroute a {
+    text-decoration: none;
+    color: white;
+}
+
 main {
     background-color: rgb(247, 247, 247);
     flex: auto;
@@ -157,7 +162,7 @@ div.update {
     flex-direction: column;
     padding: 30px 60px 60px 60px;
     align-items: center;
-    gap: 25px;
+    gap: 50px;
 }
 
 .show-display {
@@ -236,4 +241,9 @@ button.show-update {
     border-radius: 5px;
     color: white;
     border: none;
+}
+
+p.error {
+    color: red;
+    font-size: small;
 }
