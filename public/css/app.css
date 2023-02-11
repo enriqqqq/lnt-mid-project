@@ -69,6 +69,8 @@ div#reroute a {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(247, 247, 247);
     flex: auto;
 }
@@ -85,11 +87,41 @@ footer {
 }
 
 /* INDEX */
+.index-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 60px;
+}
+
 .display {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     padding: 30px;
+}
+
+form#search {
+    width: 100%;
+}
+
+input.search {
+    width: 100%;
+}
+
+.search-row {
+    display: flex;
+    gap: 8px;
+}
+
+button.search {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(36, 25, 2);
+    color: white;
 }
 
 .card {
@@ -129,6 +161,7 @@ button.delete {
 }
 
 button.delete {
+    padding: 3px;
     height: 29px;
     width: 29px;
 }
@@ -157,6 +190,8 @@ div.update {
 
 .noentry-wrapper {
     display: flex;
+    flex: 1;
+    align-items: center;
     justify-content: center;
     padding: 15px;
 }

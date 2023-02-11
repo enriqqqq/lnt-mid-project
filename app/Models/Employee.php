@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+
     protected $table = 'employees';
     
     protected $fillable = [
@@ -16,4 +17,10 @@ class Employee extends Model
         'address',
         'phone_number'
     ];
+
+    public function scopeFilter($query, array $filters){
+        if($filters['search'] ?? false){
+            $query->where('name', 'like', '%' . request('search') . '%');
+        }
+    }
 }

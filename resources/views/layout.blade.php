@@ -12,7 +12,7 @@
     <div class="container">
         <header>
             <div class="logo">
-                <img class="logo" src="{{asset('images/logo-white.png')}}" alt="">
+                <a href="/"><img class="logo" src="{{asset('images/logo-white.png')}}" alt=""></a>
                 <p class="title">Library</p>
             </div>
             <div class="btn">

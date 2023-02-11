@@ -10,7 +10,7 @@ class EmployeeController extends Controller
     // Get all entries
     public function index(){
         return view('index', [
-            'employees' => Employee::all()
+            'employees' => Employee::latest()->filter(request(['search']))->paginate(35)
         ]);
     }
 
