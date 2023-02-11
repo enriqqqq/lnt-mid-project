@@ -1,11 +1,10 @@
 @extends('layout')
 
 @section('button')
-    <div id="reroute" href="/">Home</div>
+    <div id="reroute"><a href="/">Home</a></div>
 @endsection
 
 @section('main')
-    {{$employee}}
     <div class="show-container">
         <div class="btn-row">
             <div class="delete" style="height: 35px; width: 35px; border-radius: 7px; padding: 3px;">
@@ -25,18 +24,30 @@
                     <div class="row">
                         <label for="name">Name</label>
                         <input id="name" name="name" type="text" value="{{$employee->name}}">
+                        @error('name')
+                            <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="row">
                         <label for="age">Age</label>
                         <input id="age" name="age" type="text" value="{{$employee->age}}">
+                        @error('age')
+                            <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="row">
                         <label for="address">Address</label>
                         <input id="address" name="address" type="text" value="{{$employee->address}}">
+                        @error('address')
+                            <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
                     <div class="row">
                         <label for="phone_number">Phone Number</label>
                         <input id="phone_number" name="phone_number" type="text" value="{{$employee->phone_number}}">
+                        @error('phone_number')
+                            <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
                 </form>
             </div>
