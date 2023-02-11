@@ -55,14 +55,14 @@
             </div>
         </div>
         <div class="prev-next">
-            <div class="prev">
-                <a class="prev" href="">
+            <div class="prev" @if(!$prev)style="visibility: hidden"@endif>
+                <a class="prev" @if($prev)href="/employees/{{$prev->id}}"@endif>
                     <img src="{{asset('images/left-arrow.png')}}" alt="">
                 </a>
             </div>
             <button class="show-update" type="submit" form="updateform">Update</button>
-            <div class="next">
-                <a class="next" href="">
+            <div class="next" @if(!$next)style="visibility: hidden"@endif>
+                <a class="next" @if($next)href="/employees/{{$next->id}}"@endif>
                     <img src="{{asset('images/right-arrow.png')}}" alt="">
                 </a>
             </div>

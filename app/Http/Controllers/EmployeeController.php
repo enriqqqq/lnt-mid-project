@@ -17,7 +17,9 @@ class EmployeeController extends Controller
     // Show single listing
     public function show($id){
         return view('show', [
-            'employee' => Employee::find($id)
+            'employee' => Employee::find($id),
+            'next' => Employee::where('id', '>' , $id)->orderBy('id')->first(),
+            'prev' => Employee::where('id', '<' , $id)->orderBy('id', 'desc')->first()
         ]);
     }
 
