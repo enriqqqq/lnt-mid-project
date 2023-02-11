@@ -9,7 +9,10 @@ use App\http\Controllers\EmployeeController;
 Route::get('/', [EmployeeController::class, 'index']);
 
 // Update new entry
-Route::put('/employees/update/{employee}', [EmployeeController::class, 'update']);
+Route::put('/employees/{employee}', [EmployeeController::class, 'update']);
+
+// Update new entry
+Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy']);
 
 // Show create form
 Route::get('/employees/create', [EmployeeController::class, 'create']);

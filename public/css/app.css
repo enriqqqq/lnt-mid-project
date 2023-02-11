@@ -116,7 +116,8 @@ img.profile {
     gap: 8px;
 }
 
-.btn-row div {
+.btn-row div,
+button.delete {
     height: 25px;
     width: 25px;
     border-radius: 3px;
@@ -127,8 +128,12 @@ img.profile {
     padding: 2px;
 }
 
-.update a,
-.delete a {
+button.delete {
+    height: 29px;
+    width: 29px;
+}
+
+.update a {
     display: block;
     height: 90%;
     width: 90%;
@@ -142,7 +147,7 @@ img.btn {
     width: auto;
 }
 
-div.delete {
+button.delete {
     background-color: rgb(207, 93, 93);
 }
 

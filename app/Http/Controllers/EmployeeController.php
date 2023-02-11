@@ -51,4 +51,10 @@ class EmployeeController extends Controller
         Employee::create($formFields);
         return redirect('/');
     }
+
+    // Delete entry
+    public function destroy(Employee $employee){
+        $employee->delete();
+        return redirect('/');
+    }
 }

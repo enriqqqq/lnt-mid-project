@@ -7,18 +7,20 @@
 @section('main')
     <div class="show-container">
         <div class="btn-row">
-            <div class="delete" style="height: 35px; width: 35px; border-radius: 7px; padding: 3px;">
-                <a href="#">
+            <form action="/employees/{{$employee->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="delete" type="submit" style="height: 42px; width: 42px; border-radius: 7px; padding: 6px;">
                     <img src="{{asset('images/delete.png')}}" alt="" class="btn">
-                </a>
-            </div>
+                </button>
+            </form>
         </div>
         <div class="show-display">
             <div class="img-wrapper">
                 <img class="show-profile" src="{{asset('images/no-profile-2.png')}}" alt="">
             </div>
             <div class="show-modal">
-                <form action="/employees/update/{{$employee->id}}" id="updateform" method="POST">
+                <form action="/employees/{{$employee->id}}" id="updateform" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="row">
