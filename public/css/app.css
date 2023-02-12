@@ -86,6 +86,15 @@ footer {
     color: white;
 }
 
+.flash {
+    position: fixed;
+    background-color: rgb(247, 247, 247);
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 4px 5px 5px rgb(199, 199, 199);
+    border: 1px solid black;
+}
+
 /* INDEX */
 .index-container{
     display: flex;
@@ -216,6 +225,7 @@ img.show-profile {
     width: 190px;
     height: 252px;
     border-radius: 5px;
+    box-shadow: 4px 5px 5px rgb(199, 199, 199);
 }
 
 .img-wrapper {
@@ -228,6 +238,7 @@ img.show-profile {
 
 input[type="file"] {
     width: 60%;
+    background: white;
 }
 
 .show-modal {
@@ -308,6 +319,9 @@ p.error {
 }
 
 /* CREATE */
+h1 {
+    text-shadow: 4px 5px 5px rgb(199, 199, 199);
+}
 .create-container {
     display: flex;
     flex-direction: column;
@@ -340,7 +354,8 @@ div.next:hover,
 button.show-update:hover,
 button.delete:hover,
 div.update:hover,
-button.search:hover {
+button.search:hover,
+button.create-btn:hover {
     filter:brightness(0.85);
 }
 

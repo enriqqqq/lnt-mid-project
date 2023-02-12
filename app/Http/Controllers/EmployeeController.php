@@ -42,7 +42,7 @@ class EmployeeController extends Controller
         }
 
         $employee->update($formFields);
-        return redirect('/');
+        return redirect('/employees/' . $employee->id)->with('message', 'Entry sucessfully updated.');
     }
     
     // Store entry
@@ -59,12 +59,12 @@ class EmployeeController extends Controller
         }
 
         Employee::create($formFields);
-        return redirect('/');
+        return redirect('/')->with('message', 'Entry sucessfully created.');
     }
 
     // Delete entry
     public function destroy(Employee $employee){
         $employee->delete();
-        return redirect('/');
+        return redirect('/')->with('message', 'Entry sucessfully deleted.');
     }
 }
