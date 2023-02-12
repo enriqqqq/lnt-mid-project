@@ -17,10 +17,11 @@
         </div>
         <div class="show-display">
             <div class="img-wrapper">
-                <img class="show-profile" src="{{asset('images/no-profile-2.png')}}" alt="">
+                <img class="show-profile" src="{{$employee->image ? asset('storage/' . $employee->image) : asset('images/no-profile-2.png')}}" alt="">
+                <input name="image" type="file" form="updateform" placeholder="change file">
             </div>
             <div class="show-modal">
-                <form action="/employees/{{$employee->id}}" id="updateform" method="POST">
+                <form action="/employees/{{$employee->id}}" id="updateform" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="row">

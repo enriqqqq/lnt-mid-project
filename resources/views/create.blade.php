@@ -8,7 +8,7 @@
     <div class="create-container">
         <h1>Add New Entry</h1>
         <div class="show-modal create-modal">
-            <form action="/employees" id="createform" method="POST">
+            <form action="/employees" id="createform" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <label for="name">Name</label>
@@ -35,6 +35,13 @@
                     <label for="phone_number">Phone Number</label>
                     <input id="phone_number" name="phone_number" type="text">
                     @error('phone_number')
+                        <p class="error">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="row">
+                    <label for="image">Photo</label>
+                    <input id="image" name="image" type="file">
+                    @error('image')
                         <p class="error">{{$message}}</p>
                     @enderror
                 </div>

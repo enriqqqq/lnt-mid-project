@@ -18,9 +18,9 @@ class EmployeeFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'age' => 22, 
-            'address' => "Dummy Road No.123, Indonesia",
-            'phone_number' => '08123456780'
+            'age' => $this->faker->numberBetween($min = 21, $max = 60), 
+            'address' => $this->faker->streetAddress(),
+            'phone_number' => $this->faker->regexify('^08[0-9]{9}')
         ];
     }
 }

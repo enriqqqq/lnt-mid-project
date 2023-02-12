@@ -15,7 +15,8 @@ class Employee extends Model
         'name',
         'age',
         'address',
-        'phone_number'
+        'phone_number',
+        'image'
     ];
 
     public function scopeFilter($query, array $filters){

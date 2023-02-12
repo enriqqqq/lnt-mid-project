@@ -33,12 +33,11 @@
                                 <img src="{{asset('images/delete.png')}}" alt="" class="btn">
                             </button>
                         </div>
-                        <img class="profile" src="{{asset('images/no-profile.png')}}" alt= "">
+                        <img class="profile" src="{{$employee->image ? asset('storage/' . $employee->image) : asset('images/no-profile.png')}}" alt= "">
                         <p>{{$employee->name}}</p>
                     </div>
                 @endforeach
             </div>
         </div>
     @endif
-    
 @endsection

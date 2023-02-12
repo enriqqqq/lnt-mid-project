@@ -10,7 +10,7 @@ class EmployeeController extends Controller
     // Get all entries
     public function index(){
         return view('index', [
-            'employees' => Employee::latest()->filter(request(['search']))->paginate(35)
+            'employees' => Employee::latest()->filter(request(['search']))->get()
         ]);
     }
 
@@ -31,11 +31,15 @@ class EmployeeController extends Controller
     // Update entry
     public function update(Request $request, Employee $employee){
         $formFields = $request->validate([
-            'name' => ['required', 'between:5, 20'],
-            'age' => ['required', 'gt:20'],
-            'address' => ['required', 'between:10, 40'],
-            'phone_number' => ['required', 'regex:/^08[0-9]*$/']
+            'name' => ['between:5, 20'],
+            'age' => ['gt:20'],
+            'address' => ['between:10, 40'],
+            'phone_number' => ['regex:/^08[0-9]*$/']
         ]);
+
+        if($request->hasFile('image')){
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
 
         $employee->update($formFields);
         return redirect('/');
@@ -49,6 +53,10 @@ class EmployeeController extends Controller
             'address' => ['required', 'between:10, 40'],
             'phone_number' => ['required', 'regex:/^08[0-9]*$/']
         ]);
+
+        if($request->hasFile('image')){
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
 
         Employee::create($formFields);
         return redirect('/');
