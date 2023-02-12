@@ -151,6 +151,10 @@ img.profile {
     border-radius: 50%;
 }
 
+p {
+    text-align: center;
+}
+
 .btn-row {
     display: flex;
     width: 100%;
