@@ -34,7 +34,7 @@ class EmployeeController extends Controller
             'name' => ['between:5, 20'],
             'age' => ['gt:20'],
             'address' => ['between:10, 40'],
-            'phone_number' => ['regex:/^08[0-9]*$/']
+            'phone_number' => ['regex:/^08[0-9]{0,12}$/']
         ]);
 
         if($request->hasFile('image')){
@@ -51,7 +51,7 @@ class EmployeeController extends Controller
             'name' => ['required', 'between:5, 20'],
             'age' => ['required', 'gt:20'],
             'address' => ['required', 'between:10, 40'],
-            'phone_number' => ['required', 'regex:/^08[0-9]*$/']
+            'phone_number' => ['required', 'regex:/^08[0-9]{0,12}$/']
         ]);
 
         if($request->hasFile('image')){

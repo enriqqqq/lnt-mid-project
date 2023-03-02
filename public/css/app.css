@@ -320,6 +320,7 @@ button.show-update {
 p.error {
     color: red;
     font-size: small;
+    align-self: flex-start;
 }
 
 /* CREATE */
